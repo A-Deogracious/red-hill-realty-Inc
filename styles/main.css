@@ -1,0 +1,665 @@
+/* Reset and full-height setup */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center utility */
+.centered {
+  margin: 0 auto;
+}
+
+/* Full-page background */
+.main-body {
+  background-image: url("../images/kampala_View.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;      /* fill the screen */
+  background-position: center; /* center the image */
+  background-attachment: fixed; /* keep it fixed on scroll */
+  min-height: 100vh;           /* at least full viewport height */
+}
+
+/* Hero section fills screen and centers content */
+.hero {
+  display: flex;
+  align-items: center;          /* vertical center */
+  justify-content: center;      /* horizontal center */
+  min-height: calc(100vh - 170px); /* account for header height */
+  text-align: center;
+}
+
+/* Slight dark overlay behind hero text */
+.hero-content {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  border-radius: 4px;
+}
+
+/* Heading and hero text */
+.sub-head {
+  font-family: "Kufam", cursive;
+  color: #ffffff;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.main-body-text {
+  font-family: sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #f1f1f1;
+  line-height: 30px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Header / nav bar */
+.nav-head {
+  background-color: #962424;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  height: 230px;
+  width: 100%;
+  text-align: center;
+}
+
+/* MAIN (top) bar – blue strip with main items */
+.main-nav {
+  background-color: #151579;      /* adjust to blue */
+}
+
+.main-menu {
+  display: flex;
+  flex-wrap: nowrap;              /* keep them on one line */
+  justify-content: flex-start;
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu > li {
+  flex: 0 1 auto;
+}
+
+.main-menu .nav-link {
+  display: block;
+  padding: 14px 18px;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.main-menu .nav-link:hover {
+  background-color: #384da1;
+}
+
+/* SECOND (lower) bar – can be same color or a lighter shade */
+.secondary-nav {
+  background-color: #384da1;      /* or a slightly lighter blue */
+}
+
+.secondary-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.secondary-menu > li {
+  flex: 0 1 auto;
+}
+
+.secondary-menu .nav-link {
+  display: block;
+  padding: 10px 18px;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.secondary-menu .nav-link:hover {
+  background-color: #151579;
+}
+
+/* Logo + hamburger */
+.logo-and-hamburger-container {
+  margin-bottom: 20px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.logo {
+  height: 90px;
+  width: 120px;
+}
+
+.logo-container {
+  margin: 10px 0;
+  text-align: left;   /* or right, but flex is already pushing it */
+}
+
+.logo-head {
+  overflow: hidden;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 4px;
+  white-space: nowrap;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  position: absolute;
+  color: #6d0d6d;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+
+.closeNavIcon {
+  display: none;
+}
+
+/* Mobile nav (keep as you had) */
+@media (max-width: 767px) {
+  .nav-head {
+    height: 115px;
+  }
+
+  .logo-and-hamburger-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .hamburgerIcon {
+    display: block;
+    font-size: 1.5em;
+    position: relative;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #0c1829;
+  }
+
+  nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(12, 24, 41, 0.98);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .nav-open {
+    width: 70%;
+  }
+
+  .nav-item {
+    position: relative;
+    top: 4em;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .nav-item li {
+    display: block;
+    padding: 5px;
+    transition: 0.3s;
+  }
+
+  .nav-item li:hover {
+    border-bottom: none;
+    color: #035858;
+  }
+
+  .closeNavIcon {
+    display: block;
+    font-size: 1.5em;
+    float: left;
+    position: relative;
+    top: 1.5em;
+    left: 1.5em;
+    cursor: pointer;
+    color: #0d4444;
+  }
+
+  .closeNavIcon:hover {
+    color: #035858;
+  }
+}
+
+/* About section */
+.about {
+  text-align: center;
+  position: relative;
+  bottom: 50px;
+}
+
+.about-text {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* Button */
+.btn {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.btn-enq {
+  font-family: "PT Sans", sans-serif;
+  background-color: #082c2c;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 1px;
+}
+
+.btn-enq:hover {
+  background-color: #144d4d;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(8, 44, 44, 0.9);
+}
+
+.footer-block {
+  min-height: 300px;
+}
+
+.info-block > div {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 25px;
+  padding-top: 20px;
+}
+
+.info-block > div > h4 {
+  color: #68b891;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 22px;     /* icon size */
+}
+
+.social-link:hover {
+  color: #68b891;
+}
+
+.credits {
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  color: #035858;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.credits a {
+  text-decoration: none;
+  color: #006161;
+}
+
+.credits a:hover {
+  color: #048888;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #035858;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #035858;
+}
+
+.home-worth-form {
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.home-worth-form .form-row {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-worth-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #035858;
+}
+
+.home-worth-form input,
+.home-worth-form select,
+.home-worth-form textarea {
+  padding: 8px 10px;
+  border: 1px solid #c0cfcf;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+.home-worth-form input:focus,
+.home-worth-form select:focus,
+.home-worth-form textarea:focus {
+  outline: none;
+  border-color: #048888;
+}
+
+.home-worth-form .btn-enq {
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.small-text {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 10px;
+}
+
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+}
+
+.hero .hero-content {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 4px;
+}
+
+/* Use same image as home/membership, or any hero image you like */
+.hero-home-worth {
+  background-image: url("../images/main_image.jpg");
+}
+
+.home-worth-page {
+  padding-bottom: 40px;
+}
+
+/* optional: reuse your form styles from index or membership */
+.home-worth-form .form-row {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+}
+
+/* centers the card */
+.hero-inner {
+  display: flex;
+  justify-content: center;
+}
+
+/* base styles for all hero content */
+.hero-content {
+  text-align: center;
+}
+
+/* white card on top of the background */
+.hero-content-card {
+  background:rgba(173, 53, 53, 0.92);
+  color: #035858;
+  padding: 40px 30px;
+  border-radius: 6px;
+  max-width: 800px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Buy page hero */
+.hero-buy {
+  background-image: url("../images/main_image.jpg"); /* or another Buy-specific image */
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content-card {
+  background: rgba(255, 255, 255, 0.92);
+  color: #035858;
+  padding: 40px 30px;
+  border-radius: 6px;
+  max-width: 850px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.buy-page {
+  padding-bottom: 40px;
+}
+
+/* Cards for lifestyle categories */
+.buy-card {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 15px 15px 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+}
+
+.buy-card h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #035858;
+}
+
+.buy-card p {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Insider highlight box */
+.insider-box {
+  background: #f4fbfa;
+  border-left: 4px solid #048888;
+  padding: 15px 15px 18px;
+  border-radius: 4px;
+}
+
+/* Search forms */
+.buy-search-form .form-row {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buy-search-form label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #035858;
+}
+
+.buy-search-form input,
+.buy-search-form select {
+  padding: 7px 9px;
+  border: 1px solid #c0cfcf;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+/* Table styling */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.buy-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.buy-table th,
+.buy-table td {
+  border: 1px solid #d3e0e0;
+  padding: 8px 10px;
+}
+
+.buy-table th {
+  background: #f0f6f6;
+  color: #035858;
+  text-align: left;
+}
+
+.hero-list-with-us {
+  background-image: url("../images/main_image.jpg"); /* or another image for listings */
+}
+
+/* Reuse existing hero-inner and hero-content-card from other pages */
+
+.list-with-us-page {
+  padding-bottom: 40px;
+}
+
+.list-card {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 15px 15px 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+}
+
+.list-card h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #035858;
+}
+
+.list-card p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.seller-guide-form .form-row {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.seller-guide-form label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #035858;
+}
+
+.seller-guide-form input {
+  padding: 7px 9px;
+  border: 1px solid #c0cfcf;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+.prepping-list li {
+  margin-bottom: 8px;
+}
+
+/* Optional secondary button style */
+.btn-secondary {
+  background: #ffffff;
+  color: #035858;
+  border: 1px solid #035858;
+  margin-left: 8px;
+}
+
+/* Make the nav a horizontal bar like Blue Heron */
+.main-menu {
+  display: flex;
+  flex-wrap: nowrap;          /* keep items on one line */
+  justify-content: flex-start;/* or space-between if you want them spread out */
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #384da1;  /* similar to Blue Heron bar color */
+}
+
+/* Each menu item */
+.main-menu > li {
+  flex: 0 1 auto;             /* allow items to shrink a bit if needed */
+}
+
+/* Links inside the bar */
+.main-menu .nav-link {
+  display: block;
+  padding: 14px 18px;         /* you can reduce this if it still overflows */
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;        /* keep each label on one line */
+}
+
+/* Hover / active states (optional) */
+.main-menu .nav-link:hover {
+  background-color: #2f428b;
+}
+
+.hero-about {
+  background-image: url("../images/main_image.jpg"); /* or another about image */
+}
+
+.about-page {
+  padding-bottom: 40px;
+}
+
+.hero-hot-deals {
+  background-image: url("../images/main_image.jpg"); /* or another hero image */
+}
+
+.hot-deals-page {
+  padding-bottom: 40px;
+}
+
+.deal-card {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 20px 18px 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}

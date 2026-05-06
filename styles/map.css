@@ -1,0 +1,75 @@
+/* Map styles */
+#map {
+  height: 500px;
+  width: 800*600;
+  border-radius: 5px;
+  margin-top: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.map-section {
+  padding: 50px 0;
+  background-color: rgb(84, 62, 62);
+}
+
+.map-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #082c2c;
+  font-family: "Kufam", cursive;
+}
+
+/* Property Search */
+.property-search-section {
+  padding: 50px 0;
+}
+
+.property-search {
+  background: rgb(255, 251, 251);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.property-search label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #082c2c;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.property-search .form-control {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+#refreshMap {
+  background-color: #082c2c;
+  border-color: #082c2c;
+  font-weight: bold;
+}
+
+#refreshMap:hover {
+  background-color: #144d4d;
+}
+
+#searchCount {
+  color: #082c2c;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  #map {
+    height: 400px;
+  }
+  
+  .property-search .col-md-3,
+  .property-search .col-md-2,
+  .property-search .col-md-1 {
+    margin-bottom: 15px;
+  }
+}
+
