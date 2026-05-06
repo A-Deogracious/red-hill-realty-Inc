@@ -1,7 +1,7 @@
 # Red Hill Realty Inc – Front-End Project
 
 This is a front-end web application for **Red Hill Realty Inc**, a real estate company operating in Kampala, Uganda.  
-The project is part of my Front-End Development exam at Cavendish University Uganda and demonstrates modern HTML, CSS, and JavaScript practices. [file:14]
+The project demonstrates modern HTML, CSS, and JavaScript practices. [file:14]
 
 ## Project Goal
 
