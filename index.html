@@ -2,10 +2,273 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=html/index.html" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/map.css" />
+
+    <!-- Font Awesome for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+    />
+
+    <!-- Bootstrap grid -->
+    <link rel="stylesheet" href="styles/bootstrap-grid.min.css" />
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kufam:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/ios-filled/50/000000/v-symbol.png"
+      type="image/x-icon"
+    />
+
     <title>Red Hill Realty Inc</title>
+
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   </head>
+
   <body>
-    <p>If you are not redirected automatically, <a href="html/index.html">click here</a>.</p>
+    <div class="container-fluid">
+      <!-- Header + Nav -->
+      <header class="row">
+        <div class="nav-head col-12">
+          <div class="logo-and-hamburger-container col-12">
+            <div class="logo-container">
+              <a href="./index.html" class="logo-link">
+                <img
+                  class="logo"
+                  src="https://i.pinimg.com/originals/84/0e/95/840e95c91411fa024b9e1338c45dcf7b.png"
+                  alt="logo"
+                />
+                <h4 class="logo-head">RED HILL REALTY INC</h4>
+              </a>
+            </div>
+
+            <div class="hamburgerIcon">
+              <span id="openNavIcon" onclick="openNav()">&#9776;</span>
+            </div>
+          </div>
+
+          <nav class="main-nav">
+  <ul class="nav-item main-menu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="buy.html" class="nav-link">Buy</a></li>
+    <li><a href="home-worth.html" class="nav-link">What’s Your Home Worth?</a></li>
+    <li><a href="list-with-us.html" class="nav-link">List with Red Hill Realty Inc.</a></li>
+    <li><a href="hot-deals.html" class="nav-link">Hot Deals</a></li>
+    <li><a href="membership.html" class="nav-link">Membership</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+  </ul>
+</nav>
+
+<nav class="secondary-nav">
+  <ul class="nav-item secondary-menu">
+    <li><a href="hot-deals.html" class="nav-link">New Listings</a></li>
+    <!-- later you can add more items here if you want -->
+  </ul>
+</nav>
+        </div>
+      </header>
+
+      <!-- Main content -->
+      <main class="row justify-content-center">
+        <div class="main-body col-12">
+          <!-- HERO OVER BACKGROUND IMAGE -->
+          <section class="hero">
+            <div class="col-12 hero-content">
+              <h1 class="sub-head">Red Hill Realty Inc</h1>
+              <p class="main-body-text">
+                Come discover the project that will change the city and
+                <br />inspire a new way of living
+              </p>
+            </div>
+          </section>
+
+          <!-- ABOUT SECTION -->
+          <div class="about col-11">
+            <h1 class="sub-head">About Us</h1>
+            <p class="about-text main-body-text">
+              Our professional team at Red Hill Real Estate is passionate about
+              our clients’ goals,<br />
+              and we strive to treat every client as if they were our only
+              one.<br />
+              With us, your next real estate experience will be enjoyable and
+              will deliver excellent results.<br />
+              Please feel free to call or email us at any time, and we will get
+              back to you as soon as possible.
+            </p>
+          </div>
+
+          <div class="btn col-12">
+            <a href="disclaimer.html">
+              <button class="btn-enq">MAKE AN ENQUIRY</button>
+            </a>
+          </div>
+
+          <!-- Property Search + Map Section -->
+          <section class="row justify-content-center property-search-section">
+            <div class="col-12">
+              <h2 class="sub-head map-title">
+                Our Properties - Search &amp; Location
+              </h2>
+
+              <!-- Search Form -->
+              <form id="propertySearchForm" class="property-search row mb-4">
+                <div class="col-md-3 mb-3">
+                  <label>Property Type:</label>
+                  <select id="propertyType" class="form-control">
+                    <option value="">All</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Land">Land</option>
+                    <option value="Rent">Rent</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <label>Min Price:</label>
+                  <input
+                    type="number"
+                    id="minPrice"
+                    class="form-control"
+                    placeholder="$0"
+                  />
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <label>Max Price:</label>
+                  <input
+                    type="number"
+                    id="maxPrice"
+                    class="form-control"
+                    placeholder="$5M+"
+                  />
+                </div>
+
+                <div class="col-md-2 mb-3">
+                  <label>Status:</label>
+                  <select id="status" class="form-control">
+                    <option value="">All</option>
+                    <option value="Active">Active</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Sold">Sold</option>
+                  </select>
+                </div>
+
+                <div class="col-md-1 mb-3">
+                  <button
+                    type="button"
+                    id="refreshMap"
+                    class="btn btn-primary w-100 h-100 mt-4"
+                  >
+                    Refresh
+                  </button>
+                </div>
+
+                <div
+                  id="searchCount"
+                  class="col-12 text-center font-weight-bold mb-3"
+                ></div>
+              </form>
+
+              <!-- Map -->
+              <div id="map"></div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="row justify-content-center">
+        <div class="footer-block col-lg-10">
+          <div class="info-block row">
+            <div class="address col-12 col-md">
+              <h4>ADDRESS</h4>
+              <address>
+                Pioneer Mall 1st Block 1st Cross,<br />
+                HSR Layout, Kampala-560016<br />
+                Tel: +256701251912
+              </address>
+            </div>
+
+            <div class="office-time col-12 col-md">
+              <h4>OFFICE TIME</h4>
+              <p>Monday to Saturday<br />10:00am | 6:00pm</p>
+            </div>
+
+            <div class="follow col-12 col-md">
+              <h4>FOLLOW US</h4>
+              <div class="social-icons">
+                <a
+                  class="social-link"
+                  href="https://www.tiktok.com/@yourboyarinda?"
+                  target="_blank"
+                  aria-label="TikTok"
+                >
+                  <i class="fab fa-tiktok"></i>
+                </a>
+                <a
+                  class="social-link"
+                  href="https://www.instagram.com/arinda.gr?"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  class="social-link"
+                  href="https://x.com/arindaunheard?s=21"
+                  target="_blank"
+                  aria-label="X (Twitter)"
+                >
+                  <i class="fab fa-x-twitter"></i>
+                </a>
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/arindadeogracious"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <p class="credits">
+              <a href="privacy.html" class="privacy-link">Privacy Policy</a>
+              <span class="credits-separator">|</span>
+              <a href="disclaimer.html" class="privacy-link">Disclaimer</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
