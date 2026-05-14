@@ -1,3 +1,34 @@
+/* Hero section with main background image */
+.hero-disclaimer {
+  background-image: url("../images/kampala_View.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 0;
+}
+
+/* Center hero content */
+.hero-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* White card on top of the hero image */
+.hero-content-card {
+  background: rgba(142, 50, 50, 0.96);
+  padding: 24px 28px;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 720px;
+}
+
+/* Body section below hero */
+.disclaimer-body {
+  padding: 40px 0 60px;
+}
+
+/* Existing container styles */
 .disclaimer-container {
   display: flex;
   justify-content: center;
@@ -5,25 +36,29 @@
   margin-bottom: 50px;
 }
 
+/* Card border and shadow */
 .disclaimer-container > div {
   border: 1px solid #1e1b22;
   box-shadow: 10px 10px 1px #082c2c8a;
 }
 
-.card ul li {
+/* Text inside the disclaimer card */
+.disclaimer-container .card p {
   font-family: "PT Sans", sans-serif;
-  color: #6ab992;
-  line-height: 40px;
-  font-size: 20px;
+  color: #1c3d3d;
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 12px;
 }
 
-.card a {
+/* Links inside card */
+.disclaimer-container .card a {
   text-decoration: none;
   font-weight: bold;
   color: #6ab992;
   font-style: italic;
 }
 
-.card a:hover {
+.disclaimer-container .card a:hover {
   color: #082c2c;
 }
