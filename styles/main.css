@@ -663,3 +663,70 @@ footer {
   margin-bottom: 18px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
 }
+
+.buy-page {
+  padding: 40px 0 60px;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.property-card {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.property-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.property-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #082c2c;
+  margin-bottom: 4px;
+}
+
+.property-location {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.property-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #048888;
+  margin-bottom: 6px;
+}
+
+.property-details {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.btn-action {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: #048888;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-action:hover {
+  background: #036d6d;
+}
