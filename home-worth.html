@@ -36,7 +36,6 @@
 
     <title>What’s Your Home Worth? – Red Hill Realty Inc</title>
 
-    <script src="../js/main.js"></script>
   </head>
 
   <body>
@@ -172,64 +171,98 @@
             </div>
           </section>
 
-          <!-- FORM -->
-          <section class="row justify-content-center mt-4">
-            <div class="col-11 col-lg-8">
-              <h2 class="section-title text-center">
-                Request Your Free Market Analysis
-              </h2>
-              <form class="home-worth-form">
-                <div class="form-row">
-                  <label for="ownerName">Full Name</label>
-                  <input
-                    type="text"
-                    id="ownerName"
-                    name="ownerName"
-                    placeholder="Your name"
-                    required
-                  />
-                </div>
-                <div class="form-row">
-                  <label for="ownerEmail">Email</label>
-                  <input
-                    type="email"
-                    id="ownerEmail"
-                    name="ownerEmail"
-                    placeholder="you@example.com"
-                    required
-                  />
-                </div>
-                <div class="form-row">
-                  <label for="ownerPhone">Phone / WhatsApp</label>
-                  <input
-                    type="tel"
-                    id="ownerPhone"
-                    name="ownerPhone"
-                    placeholder="+256..."
-                    required
-                  />
-                </div>
-                <div class="form-row">
-                  <label for="propertyLocation">Property Location</label>
-                  <input
-                    type="text"
-                    id="propertyLocation"
-                    name="propertyLocation"
-                    placeholder="e.g. Muyenga, Kyanja, Naalya, Najjera"
-                    required
-                  />
-                </div>
-                <div class="form-row">
-                  <label for="propertyType">Property Type</label>
-                  <select id="propertyType" name="propertyType" required>
-                    <option value="">Select type</option>
-                    <option value="bungalow">
-                      Bungalow / Standalone House
-                    </option>
-                    <option value="apartment">Apartment</option>
-                    <option value="townhouse">Townhouse / Duplex</option>
-                    <option value="land">Land / Plot</option>
-                  </select>
+                <!-- FORM + IMAGE -->
+      <section class="row justify-content-center mt-4">
+        <div class="col-11 col-xl-10 home-worth-form-wrapper">
+          <div class="home-worth-form-col">
+            <h2 class="section-title">
+              Request Your Free Market Analysis
+            </h2>
+            <form class="home-worth-form">
+              <div class="form-row">
+                <label for="ownerName">Full Name</label>
+                <input
+                  type="text"
+                  id="ownerName"
+                  name="ownerName"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="ownerEmail">Email</label>
+                <input
+                  type="email"
+                  id="ownerEmail"
+                  name="ownerEmail"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="ownerPhone">Phone / WhatsApp</label>
+                <input
+                  type="tel"
+                  id="ownerPhone"
+                  name="ownerPhone"
+                  placeholder="+256..."
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="propertyLocation">Property Location</label>
+                <input
+                  type="text"
+                  id="propertyLocation"
+                  name="propertyLocation"
+                  placeholder="e.g. Muyenga, Kyanja, Naalya, Najjera"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="propertyType">Property Type</label>
+                <select id="propertyType" name="propertyType" required>
+                  <option value="">Select type</option>
+                  <option value="bungalow">
+                    Bungalow / Standalone House
+                  </option>
+                  <option value="apartment">Apartment</option>
+                  <option value="townhouse">Townhouse / Duplex</option>
+                  <option value="land">Land / Plot</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="additionalInfo">
+                  Anything else we should know?
+                </label>
+                <textarea
+                  id="additionalInfo"
+                  name="additionalInfo"
+                  rows="3"
+                  placeholder="Condition, upgrades, access road, tenancy, etc."
+                ></textarea>
+              </div>
+              <div class="form-row text-center">
+                <button type="submit" class="btn-enq">
+                  Request Free Market Analysis
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <aside class="home-worth-image-col">
+            <img
+              src="images/Seguku-Entebbe-Home.jpg"
+              alt="Premium Kampala home exterior"
+              class="home-worth-side-image"
+            />
+            <p class="small-text">
+              Get a data‑driven estimate, based on real sales across Greater
+              Kampala, not guesswork.
+            </p>
+          </aside>
+        </div>
+      </section>
                 </div>
                 <div class="form-row">
                   <label for="additionalInfo">

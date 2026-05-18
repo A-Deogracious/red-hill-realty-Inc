@@ -488,6 +488,42 @@ footer {
   cursor: pointer;
 }
 
+/* Home Worth form + side image */
+.home-worth-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.home-worth-form-col {
+  flex: 1 1 55%;
+}
+
+.home-worth-image-col {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.home-worth-side-image {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 10px;
+}
+
+/* Stack form and image on small screens */
+@media (max-width: 768px) {
+  .home-worth-form-wrapper {
+    flex-direction: column;
+  }
+
+  .home-worth-image-col {
+    order: -1;           /* show image above form on mobile */
+  }
+}
+
 .small-text {
   font-size: 12px;
   color: #666666;
