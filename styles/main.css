@@ -730,3 +730,63 @@ footer {
 .btn-action:hover {
   background: #036d6d;
 }
+
+/* Featured Properties on homepage */
+.featured-properties-section {
+  padding: 40px 0 50px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.featured-properties-wrapper {
+  margin: 0 auto;
+}
+
+.featured-title {
+  font-family: "Kufam", cursive;
+  font-size: 32px;
+  text-align: left;
+  color: #035858;
+  margin-bottom: 20px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.featured-card {
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.featured-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-info {
+  padding: 12px 14px 14px;
+}
+
+.featured-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #048888;
+  margin-bottom: 4px;
+}
+
+.featured-address {
+  font-size: 14px;
+  color: #082c2c;
+  margin-bottom: 3px;
+}
+
+.featured-meta {
+  font-size: 13px;
+  color: #555555;
+}
