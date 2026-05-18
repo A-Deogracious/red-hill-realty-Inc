@@ -36,12 +36,12 @@
     <title>Membership – Red Hill Realty Inc</title>
 
     <!-- Main JS -->
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
   </head>
 
   <body>
     <div class="container-fluid">
-      <!-- Header + Nav (same as index.html) -->
+      <!-- Header + Nav -->
       <header class="row">
         <div class="nav-head col-12">
           <div class="logo-and-hamburger-container col-12">
@@ -62,97 +62,201 @@
           </div>
 
           <nav class="main-nav">
-  <ul class="nav-item main-menu">
-    <li><a href="index.html" class="nav-link">Home</a></li>
-    <li><a href="buy.html" class="nav-link">Buy</a></li>
-    <li><a href="home-worth.html" class="nav-link">What’s Your Home Worth?</a></li>
-    <li><a href="list-with-us.html" class="nav-link">List with Red Hill Realty Inc.</a></li>
-    <li><a href="hot-deals.html" class="nav-link">Hot Deals</a></li>
-    <li><a href="membership.html" class="nav-link">Membership</a></li>
-    <li><a href="about.html" class="nav-link">About</a></li>
-    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-  </ul>
-</nav>
+            <ul class="nav-item main-menu">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="buy.html" class="nav-link">Buy</a></li>
+              <li>
+                <a href="home-worth.html" class="nav-link">
+                  What’s Your Home Worth?
+                </a>
+              </li>
+              <li>
+                <a href="list-with-us.html" class="nav-link">
+                  List with Red Hill Realty Inc.
+                </a>
+              </li>
+              <li><a href="hot-deals.html" class="nav-link">Hot Deals</a></li>
+              <li><a href="membership.html" class="nav-link">Membership</a></li>
+              <li><a href="about.html" class="nav-link">About</a></li>
+              <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+          </nav>
 
-<nav class="secondary-nav">
-  <ul class="nav-item secondary-menu">
-    <li><a href="hot-deals.html" class="nav-link">New Listings</a></li>
-    <!-- later you can add more items here if you want -->
-  </ul>
-</nav>
+          <nav class="secondary-nav">
+            <ul class="nav-item secondary-menu">
+              <li>
+                <a href="hot-deals.html" class="nav-link">New Listings</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
 
       <!-- Main content -->
-      <main class="row justify-content-center">
+      <main class="row justify-content-center membership-page">
         <div class="main-body col-12">
-          <!-- Membership hero -->
-          <section class="hero">
-            <div class="col-12 hero-content">
-              <h1 class="sub-head">Membership Plans</h1>
-              <p class="main-body-text">
-                Choose a membership plan that fits your real estate journey with
-                Red Hill Realty Inc.
-              </p>
+          <!-- HERO -->
+          <section class="hero hero-membership">
+            <div class="col-12 hero-inner">
+              <div class="hero-content hero-content-card">
+                <h1 class="sub-head">Red Hill Membership</h1>
+                <p class="main-body-text">
+                  Become an insider in the Kampala and Entebbe property market
+                  with priority access, dedicated support, and member-only
+                  opportunities.
+                </p>
+              </div>
             </div>
           </section>
 
-          <!-- Plans -->
+          <!-- WHY JOIN -->
+          <section class="row justify-content-center mt-4">
+            <div class="col-11 col-xl-9">
+              <h2 class="section-title text-center">
+                Why become a Red Hill Member?
+              </h2>
+              <div class="row membership-benefits">
+                <div class="col-12 col-md-6 benefit-item">
+                  <h3 class="benefit-title">
+                    <i class="fa-solid fa-key"></i> Early access to deals
+                  </h3>
+                  <p class="about-text">
+                    See selected plots, apartments, and homes before they go on
+                    public listing, giving you a stronger position to choose and
+                    negotiate.
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 benefit-item">
+                  <h3 class="benefit-title">
+                    <i class="fa-solid fa-handshake"></i> Priority negotiation
+                  </h3>
+                  <p class="about-text">
+                    Our senior agents handle your files first, helping you
+                    secure better terms and move faster on time-sensitive
+                    opportunities.
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 benefit-item">
+                  <h3 class="benefit-title">
+                    <i class="fa-solid fa-users"></i> Private advisory sessions
+                  </h3>
+                  <p class="about-text">
+                    Book 1‑on‑1 sessions to review your portfolio, compare
+                    projects, and align your property moves with your financial
+                    goals.
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 benefit-item">
+                  <h3 class="benefit-title">
+                    <i class="fa-solid fa-network-wired"></i> Investor network
+                  </h3>
+                  <p class="about-text">
+                    Connect with like‑minded buyers, sellers, and investors at
+                    member networking events and focused briefings.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PLANS -->
           <section class="row justify-content-center membership-section">
-            <div class="col-12">
-              <div class="flex-container row justify-content-center">
-                <div
-                  class="gold col-11 col-sm-5 col-md-5 col-lg-4 col-xl-3 membership-card"
-                >
-                  <h3 class="plan-name">GOLD</h3>
-                  <h2 class="plan-price">$2,000 / year</h2>
-                  <ul>
-                    <li>15% off on negotiation of projects</li>
-                    <li>30% off on organization event passes</li>
-                    <li>Monthly newsletter</li>
-                    <li>2 free meetings per year can be scheduled</li>
-                  </ul>
-                </div>
+            <div class="col-11 col-xl-10">
+              <h2 class="section-title text-center">Membership plans</h2>
+              <p class="main-body-text text-center membership-intro">
+                Choose the level of support and priority that best matches your
+                property journey.
+              </p>
 
-                <div
-                  class="platinum col-11 col-sm-5 col-md-5 col-lg-4 col-xl-3 membership-card"
+              <div class="row justify-content-center membership-cards">
+                <!-- Gold -->
+                <article
+                  class="col-12 col-sm-6 col-lg-4 membership-card membership-card-gold"
                 >
-                  <h3 class="plan-name">PLATINUM</h3>
-                  <h2 class="plan-price">$1,200 / year</h2>
-                  <ul>
-                    <li>25% off on negotiation of projects</li>
-                    <li>40% off on organization event passes</li>
-                    <li>20% off on renewal of membership plans</li>
-                    <li>Weekly newsletters</li>
-                    <li>5 free meetings per year can be scheduled</li>
-                    <li>Can be a member of the organization committee</li>
-                    <li>Free entry to network events</li>
-                    <li>Personal advice for holding properties</li>
+                  <h3 class="plan-name">Gold Member</h3>
+                  <p class="plan-tagline">
+                    For serious buyers and sellers who want an edge.
+                  </p>
+                  <p class="plan-price">$600 / year</p>
+                  <ul class="plan-list">
+                    <li>Priority viewing slots for new listings</li>
+                    <li>Dedicated WhatsApp support with our team</li>
+                    <li>Up to 2 private advisory meetings per year</li>
+                    <li>Invites to select member events and webinars</li>
+                    <li>Access to curated “Hot Deals” before public release</li>
                   </ul>
-                </div>
+                  <button class="btn-enq plan-btn">
+                    Talk to us about Gold
+                  </button>
+                </article>
+
+                <!-- Platinum -->
+                <article
+                  class="col-12 col-sm-6 col-lg-4 membership-card membership-card-platinum"
+                >
+                  <div class="plan-badge">Most Popular</div>
+                  <h3 class="plan-name">Platinum Member</h3>
+                  <p class="plan-tagline">
+                    For active investors building a portfolio.
+                  </p>
+                  <p class="plan-price">$1,200 / year</p>
+                  <ul class="plan-list">
+                    <li>First‑call access to off‑market and pre‑market deals</li>
+                    <li>Senior agent assigned as your main contact</li>
+                    <li>Up to 5 private advisory meetings per year</li>
+                    <li>Priority support on negotiations and documentation</li>
+                    <li>Invites to all member‑only networking events</li>
+                    <li>Portfolio review session once per year</li>
+                  </ul>
+                  <button class="btn-enq plan-btn">
+                    Apply for Platinum
+                  </button>
+                </article>
+
+                <!-- Investor Circle -->
+                <article
+                  class="col-12 col-sm-6 col-lg-4 membership-card membership-card-investor"
+                >
+                  <h3 class="plan-name">Investor Circle</h3>
+                  <p class="plan-tagline">
+                    For high‑value clients and partners by invitation.
+                  </p>
+                  <p class="plan-price">Custom</p>
+                  <ul class="plan-list">
+                    <li>Co‑design of a tailored acquisition strategy</li>
+                    <li>Access to selected joint‑venture opportunities</li>
+                    <li>Confidential briefings on pipeline projects</li>
+                    <li>Direct access to the principal partners</li>
+                    <li>Priority onboarding for your referrals</li>
+                  </ul>
+                  <button class="btn-enq plan-btn">
+                    Request a call back
+                  </button>
+                </article>
               </div>
 
-              <div class="btn" style="border: none">
-                <a href="disclaimer.html">
-                  <button class="btn-enq">MAKE AN ENQUIRY</button>
+              <p class="membership-note text-center">
+                All memberships are subject to approval and a short onboarding
+                conversation to make sure we are the right fit for your goals.
+              </p>
+
+              <div class="membership-cta text-center">
+                <a href="contact.html" class="btn-link">
+                  <button class="btn-enq">
+                    Start your membership enquiry
+                  </button>
                 </a>
-              </div>
-
-              <div class="term-condition">
-                <span
-                  >*Terms and conditions apply on membership plans.</span
-                ><br />
-                <span
-                  >*To buy a membership plan or for any queries, contact the
-                  office number.</span
-                >
+                <p class="term-condition">
+                  *Terms and conditions apply. For any questions, call
+                  <strong>+256701251912</strong>.
+                </p>
               </div>
             </div>
           </section>
         </div>
       </main>
 
-      <!-- Footer (same as index.html) -->
+      <!-- Footer -->
       <footer class="row justify-content-center">
         <div class="footer-block col-lg-10">
           <div class="info-block row">
@@ -172,9 +276,9 @@
 
             <div class="follow col-12 col-md">
               <h4>FOLLOW US</h4>
-              <p>
+              <div class="social-icons">
                 <a
-                 class="social-link"
+                  class="social-link"
                   href="https://www.tiktok.com/@yourboyarinda?"
                   target="_blank"
                   aria-label="TikTok"
@@ -205,7 +309,7 @@
                 >
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-              </p>
+              </div>
             </div>
           </div>
 
@@ -214,8 +318,8 @@
               <a href="privacy.html" class="privacy-link">Privacy Policy</a>
               <span class="credits-separator">|</span>
               <a href="disclaimer.html" class="privacy-link">Disclaimer</a>
-          </p>
-        </div>
+            </p>
+          </div>
         </div>
       </footer>
     </div>

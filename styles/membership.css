@@ -1,59 +1,247 @@
-body {
-  background-color: #f1faf5;
+/* MEMBERSHIP PAGE – BASE */
+
+.membership-page {
+  padding-bottom: 60px;
+  background: linear-gradient(180deg, #f5faf9 0%, #eef4f6 40%, #f9fbff 100%);
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
+/* HERO */
+
+.hero-membership {
+  background: radial-gradient(circle at top left, #0d8f85 0, #035858 40%, #023435 100%);
+  color: #ffffff;
 }
 
-.flex-container > div {
-  background-color: #ffffff;
-  margin: 10px;
-  border: 1px solid black;
-  height: auto;
-  padding: 10px;
-  box-shadow: 10px 10px 1px #082c2c8a;
-  transition: 0.5s;
+.hero-membership .hero-inner {
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
-.term-condition span {
-  font-family: sans-serif;
-  font-size: 15px;
-  color: #8286869c;
+.hero-membership .hero-content-card {
+  max-width: 720px;
+  margin: 0 auto;
   text-align: center;
-  display: block;
 }
+
+.hero-membership .sub-head {
+  color: #ffffff;
+}
+
+.hero-membership .main-body-text {
+  color: #e0f5f3;
+}
+
+/* WHY JOIN SECTION */
+
+.membership-benefits {
+  margin-top: 24px;
+}
+
+.benefit-item {
+  margin-bottom: 20px;
+}
+
+.benefit-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #023435;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.benefit-title i {
+  color: #f4a11a;
+}
+
+.benefit-item .about-text {
+  margin-top: 4px;
+  color: #546564;
+}
+
+/* PLANS SECTION */
+
+.membership-section {
+  margin-top: 40px;
+}
+
+.membership-intro {
+  max-width: 640px;
+  margin: 0 auto 26px auto;
+  color: #4f5d5a;
+}
+
+/* Cards container – responsive flex grid */
+
+.membership-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* Base card */
+
+.membership-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px 20px 18px;
+  box-shadow: 0 12px 30px rgba(3, 52, 53, 0.08);
+  border: 1px solid rgba(3, 88, 88, 0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 340px;
+  min-height: 360px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Hover – subtle lift */
+
+.membership-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(3, 52, 53, 0.14);
+  border-color: rgba(3, 88, 88, 0.25);
+}
+
+/* Top accent lines per tier */
+
+.membership-card-gold {
+  border-top: 5px solid #f4a11a;
+}
+
+.membership-card-platinum {
+  border-top: 5px solid #0d8f85;
+}
+
+.membership-card-investor {
+  border-top: 5px solid #44415a;
+}
+
+/* Plan text */
 
 .plan-name {
-  font-family: "PT Sans", sans-serif;
-  text-align: center;
-  font-weight: bold;
-  font-size: 35px;
+  font-family: "Kufam", "PT Sans", sans-serif;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+  color: #023435;
+  margin-bottom: 2px;
 }
-.gold {
-  color: gold;
-}
-.platinum {
-  color: #999895;
-}
-.flex-container div ul {
-  line-height: 30px;
-  font-size: 17px;
-  color: #7c8e8b;
+
+.plan-tagline {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #6b7a78;
+  margin-bottom: 8px;
 }
 
 .plan-price {
-  color: #6ab992;
-  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0d8f85;
+  margin-bottom: 10px;
 }
 
-.btn {
-  margin-bottom: 0px;
+/* Features list */
+
+.plan-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #425250;
 }
 
-.term-condition {
-  margin-bottom: 100px;
+.plan-list li {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.plan-list li::before {
+  content: "✓";
+  color: #0d8f85;
+  font-weight: 700;
+  display: inline-block;
+  width: 18px;
+  margin-right: 4px;
+}
+
+/* “Most Popular” badge for Platinum */
+
+.plan-badge {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: linear-gradient(90deg, #0d8f85, #12b09f);
+  color: #ffffff;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* Buttons inside cards – smaller and neat */
+
+.plan-btn {
+  margin-top: auto;
+  align-self: flex-start;
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 220px;
+}
+
+/* Note & CTA under cards */
+
+.membership-note {
+  font-size: 13px;
+  color: #6b7a78;
+  margin-top: 16px;
+}
+
+.membership-cta {
+  margin-top: 22px;
+}
+
+.membership-cta .btn-enq {
+  min-width: 230px;
+}
+
+.membership-cta .term-condition {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #7c8e8b;
+}
+
+/* RESPONSIVE TWEAKS */
+
+@media (max-width: 1200px) {
+  .membership-card {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 991px) {
+  .membership-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-membership .hero-inner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .membership-page {
+    padding-bottom: 30px;
+  }
+
+  .membership-intro {
+    margin-bottom: 20px;
+  }
 }
