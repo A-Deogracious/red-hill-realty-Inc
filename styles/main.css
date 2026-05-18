@@ -252,6 +252,95 @@ body {
   line-height: 30px;
 }
 
+/* Welcome section on homepage */
+.welcome-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #384da1;        /* blue panel like the reference */
+  border-radius: 4px;
+  padding: 30px 24px 32px;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.welcome-left {
+  flex: 1 1 55%;
+}
+
+.welcome-right {
+  flex: 1 1 35%;
+}
+
+.welcome-title {
+  font-family: "Kufam", cursive;
+  font-size: 34px;
+  margin: 0 0 6px;
+}
+
+.welcome-underline {
+  height: 2px;
+  width: 80px;
+  background-color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.welcome-underline.small {
+  width: 100px;
+}
+
+.welcome-text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.welcome-tools-title {
+  font-family: "Kufam", cursive;
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.welcome-tools-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.welcome-tools-list li {
+  margin-bottom: 10px;
+}
+
+.welcome-tools-list a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.welcome-tools-list a i {
+  font-size: 18px;
+}
+
+.welcome-tools-list a:hover {
+  text-decoration: underline;
+}
+
+/* Stack columns on small screens */
+@media (max-width: 768px) {
+  .welcome-section {
+    padding: 24px 16px 26px;
+  }
+
+  .welcome-left,
+  .welcome-right {
+    flex: 1 1 100%;
+  }
+}
+
 /* Button */
 .btn {
   text-align: center;
